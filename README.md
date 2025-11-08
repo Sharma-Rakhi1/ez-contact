@@ -47,6 +47,6 @@ POST https://vernanbackend.ezlab.in/api/contact-us/
 ## 🌍 Live Demo
 
 You can view the deployed project here:  
-👉 [**EZ Contact Form Live on Vercel**](https://vercel.com/rakhi-sharmas-projects/ez-contact/5LHVo1mQLM42nKhC3hZj8A15hga1)
+👉 [**EZ Contact Form Live on Vercel**](https://ez-contact-git-main-rakhi-sharmas-projects.vercel.app)
 
 
