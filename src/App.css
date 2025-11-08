@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Body Background */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: url("./assets/BG.png") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Prevent scrolling */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header (Navbar Section) */
+.site-header {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Contact Form Container Adjustments */
+.main-content {
+  height: 100vh; /* Full screen fit */
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 4rem; /* for fixed navbar space */
+  position: relative;
+  z-index: 2;
 }
 
-.App-link {
-  color: #61dafb;
+/* Decorative Mandala — Bottom Left */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  background: url("./assets/FooterVector.png") no-repeat bottom left;
+  background-size: contain;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Decorative Mandala — Top Right (Mirrored) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: url("./assets/FooterVector.png") no-repeat top right;
+  background-size: contain;
+  transform: rotate(180deg);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure no overflow issues on small screens */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto; /* allow scroll on small devices */
   }
-  to {
-    transform: rotate(360deg);
+  .main-content {
+    flex-direction: column;
+    padding-top: 6rem;
+  }
+  .navbar-img {
+    width: 100%;
   }
 }

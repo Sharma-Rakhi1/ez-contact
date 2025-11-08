@@ -1,0 +1,116 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 4rem 6rem;
+  color: #2d2d2d;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-sizing: border-box;
+  transform: translateY(-30px); /* shift slightly upward */
+}
+
+/* -------- LEFT TEXT BLOCK -------- */
+.left-block {
+  width: 38%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.left-block h3 {
+  font-weight: 400; /* remove bold */
+  margin: 0 0 0.8rem 0;
+}
+
+.left-block p {
+  font-weight: 400;
+  margin: 0;
+}
+
+/* -------- RIGHT FORM BLOCK -------- */
+.right-block {
+  width: 48%;
+  background: transparent; /* remove translucent box */
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Center "Join the Story" heading above the form */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  text-align: center;
+  color: #2c2c2c;
+  margin: 0 0 0.3rem 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #6b6b6b;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* -------- FORM STYLING -------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+/* Center the Submit Button */
+.contact-form button {
+  width: 130px;
+  align-self: center; /* center horizontally */
+  background: #ef5a28;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #d24d1f;
+}
+
+/* Success or error message */
+.status {
+  margin-top: 1rem;
+  color: green;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2rem;
+  }
+
+  .left-block,
+  .right-block {
+    width: 100%;
+  }
+
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+}
